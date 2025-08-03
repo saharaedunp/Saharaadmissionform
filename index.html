@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Account Management</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/4.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center;">Sahara Education & Tech. Company</h1>
+    <h2>Student Admission Form</h2>
+    
+    <!-- Data Entry Form -->
+    <form id="studentForm">
+        <div>
+            <label>Student ID</label>
+            <input type="text" id="studentId" required>
+        </div>
+        <div>
+            <label>Name</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label>Contact No.</label>
+            <input type="text" id="contact" required>
+        </div>
+        <div>
+            <label>Address</label>
+            <input type="text" id="address" required>
+        </div>
+        <div>
+            <label>Admission Date</label>
+            <input type="date" id="admissionDate" required>
+        </div>
+        <div>
+            <label>Course/Class</label> 
+             <select id="Course">
+                <option>Civil Sub-Engineer</option>
+                <option>Asst. Sub-Engineer</option>
+                <option>Veterinary</option>
+            </select>
+        </div>
+        <div>
+            <label>Total Fee</label>
+            <input type="number" id="totalFee" required>
+        </div>
+            <div>
+            <label>Payment Mode</label>
+            <select name="payment-mode" id="payment-mode">
+                <option value="payment-mode">Online</option>
+                <option value="payment-mode">Cash</option>
+            </select>
+        </div>
+        <div>
+            <label>Due Fee</label>
+            <input type="number" id="dueFee" required>
+        </div>
+        <div>
+            <label>Due Fee Date</label>
+            <input type="date" id="Duedate" required>
+        </div>
+        <div>
+            <label>Payment Status</label>
+            <select id="status">
+                <option>Paid</option>
+                <option>Partial</option>
+                <option>Pending</option>
+            </select>
+        </div>
+        <div>
+            <label>Photo</label>
+            <input type="file" id="photo" accept="image/*" required>
+        </div>
+        <div class="full-width">
+            <label>Remarks</label>
+            <textarea id="remarks"></textarea>
+        </div>
+        <div class="full-width">
+            <button type="submit">Add Student</button>
+        </div>
+    </form>
+
+    <!-- Search Bar -->
+    <div style="margin: 20px 0;">
+        <label for="searchInput"><strong>Search Student:</strong></label>
+        <input type="text" id="searchInput" placeholder="Search by name or ID">
+        <button type="button" id="searchBtn"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <!-- Student Table -->
+    <table id="studentTable" border="1" style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Admission Date</th>
+                <th>Course</th>
+                <th>Total Fee</th>
+                <th>Due Fee</th>
+                <th>Payment Mode</th>
+                <th>Class Medium</th>
+                <th>Photo</th>
+                <th>Remarks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic data -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" style="text-align:right;"><strong>Total Fee Sum:</strong></td>
+                <td id="totalFeeSum" style="font-weight:bold;">0</td>
+                <td colspan="5"></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
